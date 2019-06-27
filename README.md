@@ -18,7 +18,6 @@
 
 キーのリピート, リピート入力認識までの時間をどちらも右にフルスイング
 
-スクショをここに貼る
 <img src="https://github.com/uzimihsr/setup/blob/master/images/keyboard_setting.png" width=50%>
 
 ## brew
@@ -27,17 +26,17 @@
 特に詰まるところはないはず. App Storeから落としてくる.
 
 ターミナルを開いて
-```
+```bash
 xcode-select --install
 ```
 
 ### rubyスクリプトの実行
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 上記コマンドを打ってもいいし, 心配なら[公式](https://brew.sh/)のコマンドを打つ.
 以上問題なければ
-```
+```bash
 brew doctor
 ```
 でbrewがちゃんとインストールされているか確認できる.
