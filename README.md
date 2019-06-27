@@ -16,3 +16,4 @@
 キーのリピート, リピート入力認識までの時間をどちらも右にフルスイング
 
 スクショをここに貼る
+![キーボード設定の画像](https://github.com/uzimihsr/setup/blob/master/images/keyboard_setting.png)
