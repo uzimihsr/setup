@@ -8,6 +8,8 @@
     1. Xcodeのインストール
     1. rubyスクリプトの実行
 1. zsh
+    1. zsh
+    1. prezto
 1. iTerm
 1. vim
 
@@ -26,17 +28,59 @@
 特に詰まるところはないはず. App Storeから落としてくる.
 
 ターミナルを開いて
-```bash
+```
 xcode-select --install
 ```
 
 ### rubyスクリプトの実行
-```bash
+```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 上記コマンドを打ってもいいし, 心配なら[公式](https://brew.sh/)のコマンドを打つ.
 以上問題なければ
-```bash
+```
 brew doctor
 ```
 でbrewがちゃんとインストールされているか確認できる.
+
+## zsh
+シェル一覧を確認
+```
+cat /etc/shells
+
+# List of acceptable shells for chpass(1).
+# Ftpd will not allow users to connect who are not using
+# one of these shells.
+
+/bin/bash
+/bin/csh322
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+```
+こんなんなるはず.  
+次にzshをbrew install
+```
+brew update
+brew install zsh
+```
+もう一度確認
+```
+cat /etc/shells
+
+# List of acceptable shells for chpass(1).
+# Ftpd will not allow users to connect who are not using
+# one of these shells.
+
+/bin/bash
+/bin/csh322
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+/usr/local/bin/zsh
+```
+`/usr/local/bin/zsh`が増えていればOK.
+
+## prezto
