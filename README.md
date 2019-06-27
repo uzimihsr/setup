@@ -47,13 +47,13 @@ brew doctor
 シェル一覧を確認
 ```
 cat /etc/shells
-
+>>>
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
 # one of these shells.
 
 /bin/bash
-/bin/csh322
+/bin/csh
 /bin/ksh
 /bin/sh
 /bin/tcsh
@@ -68,13 +68,13 @@ brew install zsh
 もう一度確認
 ```
 cat /etc/shells
-
+>>>
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
 # one of these shells.
 
 /bin/bash
-/bin/csh322
+/bin/csh
 /bin/ksh
 /bin/sh
 /bin/tcsh
@@ -84,3 +84,18 @@ cat /etc/shells
 `/usr/local/bin/zsh`が増えていればOK.
 
 ## prezto
+ログインシェルを変更.
+```
+chsh -s /usr/local/bin/zsh
+echo $SHELL
+>>>
+/usr/local/bin/zsh
+```
+ついでに現在のシェルも変更する(またはターミナル再起動).
+```
+/usr/local/bin/zsh
+```
+git cloneする. 心配なら[公式](https://github.com/sorin-ionescu/prezto)のコマンドを打つ.
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
