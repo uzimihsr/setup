@@ -17,3 +17,4 @@
 
 スクショをここに貼る
 ![キーボード設定の画像](https://github.com/uzimihsr/setup/blob/master/images/keyboard_setting.png)
+<img src="https://github.com/uzimihsr/setup/blob/master/images/keyboard_setting.png" width=50%>
