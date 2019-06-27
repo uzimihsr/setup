@@ -7,9 +7,11 @@
 1. brew
     1. Xcodeのインストール
     1. rubyスクリプトの実行
-1. zsh
+1. シェルいじり
     1. zsh
     1. prezto
+    1. zsh-autosuggestion
+    1. zsh-syntax-highlighting
 1. iTerm
 1. vim
 
@@ -42,8 +44,8 @@ xcode-select --install
 brew doctor
 ```
 でbrewがちゃんとインストールされているか確認できる.
-
-## zsh
+## シェルいじり
+### zsh
 シェル一覧を確認
 ```
 cat /etc/shells
@@ -83,7 +85,7 @@ cat /etc/shells
 ```
 `/usr/local/bin/zsh`が増えていればOK.
 
-## prezto
+### prezto
 ログインシェルを変更.
 ```
 chsh -s /usr/local/bin/zsh
@@ -99,3 +101,30 @@ git cloneする. 心配なら[公式](https://github.com/sorin-ionescu/prezto)�
 ```
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
+zsh設定ファイルへのシンボリックリンクを貼る. 以下をコピペする.
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+一応確認. home直下に.zshrc, .zlogin, .zlogout, .zprofile, .zshenvへのシンボリックリンクができているはず.
+```
+ls -la ~ | grep .zshrc
+>>>
+.zshrc -> /Users/[ユーザ名]/.zprezto/runcoms/zshrc
+```
+zshを再起動.
+プロンプトを変更. pure一択.
+```
+vim ~/.zpreztorc
+>>>
+# Set the prompt theme to load.
+# Setting it to 'random' loads a random theme.
+# Auto set to 'off' on dumb terminals.
+zstyle ':prezto:module:prompt' theme 'sorin' # この行を
+zstyle ':prezto:module:prompt' theme 'pure'  # に変更
+```
+### zsh-autosuggestion
+
+### zsh-syntax-highlighting
