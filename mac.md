@@ -22,11 +22,11 @@ $ xcode-select --install
 
 rubyスクリプトを動かす.
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 上記コマンドを打ってもいいし, 心配なら[公式](https://brew.sh/)のコマンドを打つ.
 以上問題なければ
 ```
-brew doctor
+$ brew doctor
 ```
 でbrewがちゃんとインストールされているか確認できる.
