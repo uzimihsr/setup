@@ -5,6 +5,12 @@
     - brew
 - git
 
+## やること
+- [install zsh](#install-zsh)
+- [install prezto](#install-prezto)
+- [install zsh-syntax-highlighting](#install-zsh-syntax-highlighting)
+- [install zsh-autosuggestions](#install-zsh-autosuggestions)
+
 ## install zsh
 
 macの場合:
