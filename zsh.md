@@ -78,12 +78,62 @@ zstyle ':prezto:module:prompt' theme 'pure'  # に変更
 
 terminalを再起動.
 
+## install zsh-syntax-highlighting
+
+`.zpreztorc`に記述
+```
+$ vim ~/.zpreztorc
+
+...
+#
+# General
+#
+...
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'syntax-highlighting'\ # この行を追加
+  'prompt'
+...
+#
+# Syntax Highlighting
+#
+#----ここから----#
+# syntax-highlighting
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
+
+# Set syntax highlighters.
+# By default, only the main highlighter is enabled.
+ zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'line' \
+   'cursor' \
+   'root'
+#----ここまで追加----#
+# 多分デフォルトコメントアウトされているのではずすだけでもOK
+...
+```
+
 ## install zsh-autosuggestions
 
 `.zpreztorc`に記述
 ```
 $ vim ~/.zpreztorc
 
+...
+#
+# General
+#
 ...
 # Set the Prezto modules to load (browse modules).
 # The order matters.
@@ -97,11 +147,9 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'syntax-highlighting'\
-  'autosuggestions'\ // この行を
+  'autosuggestions'\ // この行を追加
   'prompt'
 ...
 ```
 
 terminalを再起動.
-
-## install zsh-syntax-highlighting
