@@ -66,35 +66,40 @@ home直下に.zshrc, .zlogin, .zlogout, .zprofile, .zshenvへのシンボリッ�
 
 ```
 $ vim ~/.zpreztorc
-~~~
+
+...
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin' # この行を
 zstyle ':prezto:module:prompt' theme 'pure'  # に変更
-~~~
+...
 ```
 
 terminalを再起動.
 
 ## install zsh-autosuggestions
 
-zsh-autosuggestionsをgit clone
-
+`.zpreztorc`に記述
 ```
-$ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-```
+$ vim ~/.zpreztorc
 
-または[公式](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)のコマンドを打つ.
-
-`.zshrc`に追記する.
-
-```
-$ vim ~/.zshrc
-~~~
-# zsh-autosuggestion
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-~~~
+...
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'syntax-highlighting'\
+  'autosuggestions'\ // この行を
+  'prompt'
+...
 ```
 
 terminalを再起動.
