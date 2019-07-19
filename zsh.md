@@ -1,9 +1,16 @@
 # zsh設定メモ
 
-## 前提条件
-- mac
+## 必要なもの
+- Mac
     - brew
-- git
+- Debian
+    - apt-get
+- Red Hat
+    - yum
+- Windows
+    - 知らん
+- 共通
+    - git
 
 ## やること
 - [install zsh](#install-zsh)
@@ -13,7 +20,7 @@
 
 ## install zsh
 
-macの場合:
+Macの場合:
 
 ```
 $ brew update
@@ -159,3 +166,6 @@ zstyle ':prezto:load' pmodule \
 ```
 
 terminalを再起動.
+
+## future
+さらなる高みへ...
