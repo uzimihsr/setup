@@ -1,7 +1,7 @@
-# Mac設定メモ
+# Atom設定メモ
 
 ## 必要なもの
-- mac
+- Mac
     - 特になし
 - Linux
     - 特になし
@@ -13,3 +13,17 @@
 - install atom-beautify
 - install script
 - install file-icons
+
+## install Atom
+
+### Macの場合
+[Atom](https://atom.io/)をダウンロード. 展開した`Atom.app`を`/Applications/`に配置.
+
+GitHub連携とかはやらなくてもいい, Gitタブだけでもかなり便利.
+
+## install file-icons
+各ファイルのアイコンをかわいくしてくれる.
+
+`Preferences -> Install -> Packages`で`file-icons`を検索. いっぱい出てくるけど画像のものをInstall.
+
+![Packages検索結果](images/atom-file-icons.png)
