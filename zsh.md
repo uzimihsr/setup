@@ -160,7 +160,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'syntax-highlighting'\
-  'autosuggestions'\ // この行を追加
+  'autosuggestions'\ # この行を追加
   'prompt'
 ...
 ```

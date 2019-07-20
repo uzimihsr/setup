@@ -4,5 +4,7 @@
 各種ツールの導入方法なんかを記録していきたい.
 
 - [zsh](zsh.md) : zsh, prezto, zsh-syntax-highlighting, zsh-autosuggestions
-- [Mac](mac.md) : 工事中
-- linux : まだ書けてない
+- [Mac](mac.md) : キーボード設定, brew
+- terminal : tmux, iTerm2
+- Vim : vimrc
+- Atom : ide-ui, file-icon

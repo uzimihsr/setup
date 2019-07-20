@@ -30,3 +30,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ brew doctor
 ```
 でbrewがちゃんとインストールされているか確認できる.
+
+## install cheatsheet
+
+[CheatSheet](https://www.cheatsheetapp.com/CheatSheet/)をダウンロード.
