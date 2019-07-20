@@ -8,6 +8,7 @@
 - [install brew](#install-brew)
 - [install CheatSheet](#install-CheatSheet)
 - [install iTerm2](#install-iTerm2)
+- [install Iceberg](#install-Iceberg)
 
 ## keyboard setting
 
@@ -62,9 +63,9 @@ $ brew doctor
 
 まずはデフォルトのターミナルから.
 
-[Iceberg for macOS](http://cocopon.github.io/iceberg.vim/#macosTerminalApp)をダウンロードしてzipを解凍. ターミナルを起動
+[Iceberg for macOS](http://cocopon.github.io/iceberg.vim/#macosTerminalApp)をダウンロードしてzipを解凍.
 
-`ターミナル -> 環境設定 -> プロファイル -> 左下⚙ -> 読み込む`から, `ダウンロード/Iceberg.terminal`を選択し, デフォルトに設定する.
+`ターミナル -> 環境設定 -> プロファイル -> 左下⚙ -> 読み込む`から, `Iceberg.terminal`を選択し, デフォルトに設定する.
 
 `ターミナル -> 環境設定 -> プロファイル -> テキスト -> 背景 -> カラーとエフェクト`から
 `不透明度: 80%, ブラー: 0%`に設定.
@@ -78,3 +79,6 @@ $ git clone https://github.com/Arc0re/Iceberg-iTerm2
 ```
 
 `iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets... -> Import...`から, `[cloneしてきたIceberg-iTerm2]/iceberg.itermcolors`を選択.
+
+## future
+なんかいいのあったら足していこう

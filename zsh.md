@@ -168,4 +168,4 @@ zstyle ':prezto:load' pmodule \
 terminalを再起動.
 
 ## future
-さらなる高みへ...
+なんかいいのあったら足していこう

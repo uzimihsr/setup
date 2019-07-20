@@ -5,5 +5,7 @@
 
 - [zsh](zsh.md) : zsh, prezto, zsh-syntax-highlighting, zsh-autosuggestions
 - [Mac](mac.md) : キーボード設定, brew, CheatSheet, iTerm2, Iceberg
-- Vim : vimrc
 - Atom : ide-ui, file-icon
+- Vim : vimrc
+- python : pythonの環境構築
+- go : goの環境構築
