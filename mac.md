@@ -59,6 +59,8 @@ $ brew doctor
 
 おそらく`Ctrl`キー2回タップでiTermが立ち上がるはず.
 
+`iTerm2 -> Preferences -> Profiles -> Keys -> Hotkey Window` をよしなにする
+
 ## install Iceberg
 
 まずはデフォルトのターミナルから.
