@@ -52,3 +52,11 @@ $ pipenv shell
 ```
 $ exit
 ```
+
+Atom用にpython3の環境を作っておく
+
+```
+$ mkdir ~/python-env
+$ cd ~/python-env
+$ pipenv --python 3.7
+```
