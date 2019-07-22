@@ -16,7 +16,7 @@
 
 `キーのリピート`, `リピート入力認識までの時間`をどちらも右にフルスイング
 
-![キーボード設定画面](images/keyboard_setting.png)
+![キーボード設定画面](images/keyboard-setting.png)
 
 ## install brew
 
@@ -49,13 +49,13 @@ $ brew doctor
 
 `iTerm2 -> Preferences -> General -> Window -> Native full screen windows`のチェックを解除する.
 
-![iTerm設定画面](images/iterm_setting_01.png)
+![iTerm設定画面](images/iterm-setting-01.png)
 
 `iTerm2 -> Preferences -> Profiles -> Window -> Settings for new  windows`を
 
 `Styles: Fullscreen, Screen: screen with Cursor, Space: All Spaces`に設定.
 
-![iTerm設定画面2](images/iterm_setting_02.png)
+![iTerm設定画面2](images/iterm-setting-02.png)
 
 おそらく`Ctrl`キー2回タップでiTermが立ち上がるはず.
 
