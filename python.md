@@ -5,8 +5,8 @@
     - brew
 
 ## やること
-- install python
-- install pipenv
+- [install python](#install-python)
+- [install pipenv](#install-pipenv)
 
 ## install python
 
@@ -16,7 +16,7 @@ Macの場合:
 
 ## install pipenv
 
-[Pipenv](https://docs.pipenv.org/en/latest/)を使う.
+仮想環境の切り分けに[Pipenv](https://docs.pipenv.org/en/latest/)を使う.
 
 ```
 $ brew install pipenv
