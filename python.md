@@ -28,13 +28,13 @@ $ brew install pipenv
 $ export PIPENV_VENV_IN_PROJECT=1
 ```
 
-仮想環境を分けるには対象のディレクトリで`pipenv --python [バージョン]`を打つ. 2.7と3.7以外が必要ならpyenvで入れられるらしい. 知らん.
+仮想環境を分けるには対象のディレクトリで`pipenv --python [バージョン]`を打つ. すでに入ってるもの以外のが必要ならpyenvで入れられるらしい. 知らん.
 
 ```
 $ pipenv --python 2.7
 ```
 
-仮想環境に入るときは`.env`があるディレクトリに移動して
+`Pipfile`と`.env`が作成されるはず. 仮想環境に入るときは`Pipfile`と`.env`があるディレクトリに移動して
 
 ```
 $ pipenv shell
