@@ -12,7 +12,14 @@
 
 Macの場合:
 
-デフォルトでpythonとpython3が使えるはずなので特にすることなし.
+デフォルトで`/usr/bin/python`にpython2系が入っているが, brewで入れ直す
+
+```
+$ brew install python@2
+$ brew install python3
+```
+
+`/usr/local/bin/python`にpython2系が, `/usr/local/bin/python3`にpython3系がインストールされる.
 
 ## install pipenv
 
@@ -44,4 +51,12 @@ $ pipenv shell
 
 ```
 $ exit
+```
+
+Atom用にpython3の環境を作っておく
+
+```
+$ mkdir ~/python-env
+$ cd ~/python-env
+$ pipenv --python 3.7
 ```

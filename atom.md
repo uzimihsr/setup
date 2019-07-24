@@ -58,9 +58,57 @@ $ apm install script
 
 コードを自動整形してくれる. 言語ごとに追加で必要なBeautifiersを入れる必要がある. 詳しくは公式を参照.
 
-もしかしたらide-uiで十分かも
+```
+$ apm install atom-beautify
+```
+
+`Ctrl+Option+B`でコードを整形してくれる.
+
+### install autopep8
+```
+$ pip install --upgrade autopep8
+$ pip install isort
+```
 
 ## install linter
+[Linter](https://atom.io/packages/linter)
+
 文法エラーを指摘してくれる. 言語ごとに追加のPackageを入れる必要あり.
 
-もしかしたらide-uiで十分かも
+```
+$ apm install linter
+```
+
+### install linter-pycodestyle
+[linter-pycodestyle](https://atom.io/packages/linter-pycodestyle)
+```
+apm install linter-pycodestyle
+```
+
+## install atom-ide-ui
+非推奨
+[atom-ide-ui](https://atom.io/packages/atom-ide-ui)
+
+AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加で入れる必要あり.
+
+```
+$ apm install atom-ide-ui
+```
+
+### install ide-python
+非推奨
+[ide-python](https://atom.io/packages/ide-python)
+
+atom-ide-uiをpythonに対応させてくれる.
+
+pipが使える環境で
+
+```
+python -m pip install 'python-language-server[all]'
+```
+
+さらに
+
+```
+apm install ide-python
+```
