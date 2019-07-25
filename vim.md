@@ -1,10 +1,10 @@
 # Vim設定メモ
-極力Atomとか使いたいけど, ssh先でどうしてもエディタ使わざるを得ない場合があるので一応設定しておく.
-未完成.
+ssh先でvimを使わざるを得ない場合に最低限気持ちよく使うための設定
 
 ## 必要なもの
-- Mac
+- 共通
     - vim
+    - curl
 
 ## やること
 - [setup .vimrc](#setup-.vimrc)
@@ -105,3 +105,6 @@ $ curl -O https://raw.githubusercontent.com/cocopon/iceberg.vim/master/colors/ic
 ```
 colorscheme iceberg
 ```
+
+## future
+もっと良い設定があれば足していく
