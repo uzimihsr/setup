@@ -7,5 +7,5 @@
 - [zsh](zsh.md) : zsh, prezto, zsh-syntax-highlighting, zsh-autosuggestions
 - [python](python.md) : pythonの環境構築
 - [Atom](atom.md) : ide-ui, file-icon
-- Vim : vimrc
+- [Vim](vim.md) : .vimrc, iceberg
 - go : goの環境構築

@@ -1,20 +1,7 @@
-# Vim設定メモ
-ssh先でvimを使わざるを得ない場合に最低限気持ちよく使うための設定
 
-## 必要なもの
-- 共通
-    - vim
-    - curl
-
-## やること
-- [setup .vimrc](#setup-vimrc)
-- [install iceberg](#install-iceberg)
-
-## setup .vimrc
-
-### settings
-ほぼおまじない
-```
+"--------------------
+" settings
+"--------------------
 set encoding=utf-8
 scriptencoding utf-8
 " vi互換を切る(本当はいらないらしい)
@@ -23,27 +10,11 @@ set nocompatible
 set nobackup
 " スワップファイルを作らない
 set noswapfile
-```
 
-### tab
-`tab`まわりの設定.
-```
-" tabをspaceに変換
-set expandtab
-" tabの幅
-set tabstop=4
-" tabを押したときに挿入されるspaceの数
-set softtabstop=4
-" インデントで挿入されるtabの長さ
-set shiftwidth=4
-" 自動インデントを有効にする
-set autoindent
-```
 
-### display
-表示まわりの設定
-
-```
+"--------------------
+" display
+"--------------------
 " タイトルを表示
 set title
 " コマンドを表示
@@ -74,12 +45,24 @@ colorscheme iceberg
 highlight CursorLineNr ctermbg=255 ctermfg=0
 " マウスを有効にする
 set mouse=a
-```
 
-# search
-検索周りの設定
+"--------------------
+" tab
+"--------------------
+" tabをspaceに変換
+set expandtab
+" tabの幅
+set tabstop=4
+" tabを押したときに挿入されるspaceの数
+set softtabstop=4
+" インデントで挿入されるtabの長さ
+set shiftwidth=4
+" 自動インデントを有効にする
+set autoindent
 
-```
+"--------------------
+" search
+"--------------------
 " 大文字小文字を区別しない
 set ignorecase
 " 検索語句に大文字が含まれる場合はignorecaseを無効化する
@@ -90,21 +73,3 @@ set hlsearch
 set incsearch
 " 検索結果が一番下まで行ったら一番上に戻る
 set wrapscan
-```
-
-## install iceberg
-[iceberg](https://cocopon.github.io/iceberg.vim/)を入れる.
-
-```
-$ mkdir ~/.vim/colors
-$ cd ~/.vim/colors
-$ curl -O https://raw.githubusercontent.com/cocopon/iceberg.vim/master/colors/iceberg.vim
-```
-
-`.vimrc`に追記
-```
-colorscheme iceberg
-```
-
-## future
-もっと良い設定があれば足していく
