@@ -27,6 +27,17 @@ set noswapfile
 set number
 ```
 
+### cursorline
+行番号のハイライト設定.
+```
+" カーソル行をハイライトするために必要
+set cursorline
+" _とかとかぶるのでcursorlineの色を消す
+highlight clear CursorLine
+" 行番号だけ色を変える, ctermbgで背景色, ctermfgで行番号の色をそれぞれ整数値で指定
+highlight CursorLineNr ctermbg=255 ctermfg=0
+```
+
 ### tab
 `tab`まわりの設定.
 ```
