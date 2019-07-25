@@ -7,7 +7,7 @@ ssh先でvimを使わざるを得ない場合に最低限気持ちよく使う�
     - curl
 
 ## やること
-- [setup .vimrc](#setup-.vimrc)
+- [setup .vimrc](#setup-vimrc)
 - [install iceberg](#install-iceberg)
 
 ## setup .vimrc
