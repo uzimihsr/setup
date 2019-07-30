@@ -9,3 +9,8 @@
 - [Atom](atom.md) : ide-ui, file-icon
 - [Vim](vim.md) : .vimrc, iceberg
 - go : goの環境構築
+
+レポジトリごとにGitアカウントを使い分けるには
+```
+$ git clone https://user:password@github.com/path/to/repo.git
+```
