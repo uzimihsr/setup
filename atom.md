@@ -76,7 +76,7 @@ $ apm install linter
 ```
 
 ## install atom-ide-ui
-非推奨
+注意
 [atom-ide-ui](https://atom.io/packages/atom-ide-ui)
 
 AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加で入れる必要あり.
@@ -85,23 +85,7 @@ AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加�
 $ apm install atom-ide-ui
 ```
 
-### install ide-python
-非推奨
-[ide-python](https://atom.io/packages/ide-python)
-
-atom-ide-uiをpythonに対応させてくれる.
-
-pipが使える環境で
-
-```
-python -m pip install 'python-language-server[all]'
-```
-
-さらに
-
-```
-apm install ide-python
-```
+もしかしたらlinterとかbeautifierと衝突するかもなので慎重に使っていく.
 
 ## for python
 pythonを気持ちよく使うための設定.
@@ -174,5 +158,16 @@ $ which isort
 ```
 
 ![atom-beautify-python](images/atom-beautify-python.png)
+
+### install ide-python
+[ide-python](https://atom.io/packages/ide-python)
+
+atom-ide-uiをpythonに対応させてくれる.
+
+```
+$ apm install ide-python
+```
+
+linterとかと競合するのでよく考えて使う.
 ## future
 どんどん足していきたい

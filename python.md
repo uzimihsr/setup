@@ -100,3 +100,14 @@ $ pipenv install isort
 ```
 
 `$ isort xxxx.py`でimport文のソートを実行してくれる.
+
+## install language-server
+[python-language-server](https://github.com/palantir/python-language-server)
+
+pythonのLSP.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ pipenv install 'python-language-server[all]'
+```
