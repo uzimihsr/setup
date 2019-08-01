@@ -106,6 +106,38 @@ apm install ide-python
 ## for python
 pythonを気持ちよく使うための設定.
 
+### setup script
+scriptでpythonを実行するときのインタプリタを設定する.
+
+`Preferences -> Open Config Folder`から,
+`~/.atom/packages/script/lib/grammars/python.coffee`を編集.
+
+```
+exports.Python =
+  'Selection Based':
+    #command: 'python' # この行を
+    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    args: (context) -> ['-u', '-c', context.getCode()]
+
+  'File Based':
+    #command: 'python' # 同様に
+    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    args: ({filepath}) -> ['-u', filepath]
+
+exports.MagicPython = exports.Python
+
+exports.Sage =
+  'Selection Based':
+    command: 'sage'
+    args: (context) -> ['-c', context.getCode()]
+
+  'File Based':
+    command: 'sage'
+    args: ({filepath}) -> [filepath]
+```
+
+これで`⌘+I`したときに指定したpythonが動くはず.
+
 ### install linter-flake8
 [linter-flake8](https://atom.io/packages/linter-flake8)
 
