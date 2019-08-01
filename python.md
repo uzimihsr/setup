@@ -7,6 +7,7 @@
 ## やること
 - [install python](#install-python)
 - [install pipenv](#install-pipenv)
+- [install flake8](#install-flake8)
 
 ## install python
 
@@ -56,7 +57,20 @@ $ exit
 Atom用にpython3の環境を作っておく
 
 ```
-$ mkdir ~/python-env
-$ cd ~/python-env
+$ mkdir ~/python-atom
+$ cd ~/python-atom
 $ pipenv --python 3.7
 ```
+
+## install flake8
+[flake8](https://pypi.org/project/flake8/)
+
+文法チェックツール(linter).
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ pipenv install flake8
+```
+
+`$ flake8 xxxx.py`でpythonのlintをしてくれる.

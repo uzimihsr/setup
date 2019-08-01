@@ -10,9 +10,11 @@
 - [install Atom](#install-Atom)
 - [install file-icons](#install-file-icons)
 - [install script](#install-script)
+- [install atom-beautify](#install-atom-beautify)
+- [install linter](#install-linter)
 - install atom-ide-ui
 - install ide-python
-- install atom-beautify
+- [for python](#for-python)
 
 ## install Atom
 
@@ -64,12 +66,6 @@ $ apm install atom-beautify
 
 `Ctrl+Option+B`でコードを整形してくれる.
 
-### install autopep8
-```
-$ pip install --upgrade autopep8
-$ pip install isort
-```
-
 ## install linter
 [Linter](https://atom.io/packages/linter)
 
@@ -77,12 +73,6 @@ $ pip install isort
 
 ```
 $ apm install linter
-```
-
-### install linter-pycodestyle
-[linter-pycodestyle](https://atom.io/packages/linter-pycodestyle)
-```
-apm install linter-pycodestyle
 ```
 
 ## install atom-ide-ui
@@ -112,3 +102,30 @@ python -m pip install 'python-language-server[all]'
 ```
 apm install ide-python
 ```
+
+## for python
+pythonを気持ちよく使うための設定.
+
+### install linter-flake8
+[linter-flake8](https://atom.io/packages/linter-flake8)
+
+flake8をAtomで使うためのパッケージ.
+```
+$ apm install linter-flake8
+```
+
+Atomを再起動後, `Preferences -> Packages -> linter-flake8 -> settings -> Executable Path`を編集.
+
+flake8がインストールされているパスを記述.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ which flake8
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/flake8 # ここで出力されるパスを記述
+```
+
+![linter-flake8](images/atom-linter-flake8.png)
+
+## future
+どんどん足していきたい
