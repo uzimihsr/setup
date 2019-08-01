@@ -10,9 +10,11 @@
 - [install Atom](#install-Atom)
 - [install file-icons](#install-file-icons)
 - [install script](#install-script)
+- [install atom-beautify](#install-atom-beautify)
+- [install linter](#install-linter)
 - install atom-ide-ui
 - install ide-python
-- install atom-beautify
+- [for python](#for-python)
 
 ## install Atom
 
@@ -64,12 +66,6 @@ $ apm install atom-beautify
 
 `Ctrl+Option+B`でコードを整形してくれる.
 
-### install autopep8
-```
-$ pip install --upgrade autopep8
-$ pip install isort
-```
-
 ## install linter
 [Linter](https://atom.io/packages/linter)
 
@@ -77,12 +73,6 @@ $ pip install isort
 
 ```
 $ apm install linter
-```
-
-### install linter-pycodestyle
-[linter-pycodestyle](https://atom.io/packages/linter-pycodestyle)
-```
-apm install linter-pycodestyle
 ```
 
 ## install atom-ide-ui
@@ -112,3 +102,77 @@ python -m pip install 'python-language-server[all]'
 ```
 apm install ide-python
 ```
+
+## for python
+pythonを気持ちよく使うための設定.
+
+### setup script
+scriptでpythonを実行するときのインタプリタを設定する.
+
+`Preferences -> Open Config Folder`から,
+`~/.atom/packages/script/lib/grammars/python.coffee`を編集.
+
+```
+exports.Python =
+  'Selection Based':
+    #command: 'python' # この行を
+    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    args: (context) -> ['-u', '-c', context.getCode()]
+
+  'File Based':
+    #command: 'python' # 同様に
+    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    args: ({filepath}) -> ['-u', filepath]
+
+exports.MagicPython = exports.Python
+
+exports.Sage =
+  'Selection Based':
+    command: 'sage'
+    args: (context) -> ['-c', context.getCode()]
+
+  'File Based':
+    command: 'sage'
+    args: ({filepath}) -> [filepath]
+```
+
+これで`⌘+I`したときに指定したpythonが動くはず.
+
+### install linter-flake8
+[linter-flake8](https://atom.io/packages/linter-flake8)
+
+flake8をAtomで使うためのパッケージ.
+```
+$ apm install linter-flake8
+```
+
+Atomを再起動後, `Preferences -> Packages -> linter-flake8 -> settings -> Executable Path`を編集.
+
+flake8がインストールされているパスを記述.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ which flake8
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/flake8 # ここで出力されるパスを記述
+```
+
+![linter-flake8](images/atom-linter-flake8.png)
+
+### setup atom-beautify
+autopep8とisortのパスを通す.
+
+`Preferences -> Packages -> atom-beautify -> settings -> Executables -> autopep8/isort`を編集.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ which autopep8
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/autopep8
+$ which isort
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/isort
+```
+
+![atom-beautify-python](images/atom-beautify-python.png)
+## future
+どんどん足していきたい
