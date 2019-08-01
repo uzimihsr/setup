@@ -73,4 +73,30 @@ $ pipenv shell
 $ pipenv install flake8
 ```
 
-`$ flake8 xxxx.py`でpythonのlintをしてくれる.
+`$ flake8 xxxx.py`でチェックしてくれる.
+
+## install autopep8
+[autopep8](https://pypi.org/project/autopep8/)
+
+コード整形ツール(formatter). PEP8準拠.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ pipenv install autopep8
+```
+
+`$ autopep8 --in-place xxxx.py`で整形してくれる.
+
+## install isort
+[isort](https://github.com/timothycrosley/isort)
+
+pythonのimport文を綺麗にしてくれる.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ pipenv install isort
+```
+
+`$ isort xxxx.py`でimport文のソートを実行してくれる.

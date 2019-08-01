@@ -127,5 +127,20 @@ $ which flake8
 
 ![linter-flake8](images/atom-linter-flake8.png)
 
+### setup atom-beautify
+autopep8とisortのパスを通す.
+
+`Preferences -> Packages -> atom-beautify -> settings -> Executables -> autopep8/isort`を編集.
+
+```
+$ cd ~/python-atom
+$ pipenv shell
+$ which autopep8
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/autopep8
+$ which isort
+/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/isort
+```
+
+![atom-beautify-python](images/atom-beautify-python.png)
 ## future
 どんどん足していきたい
