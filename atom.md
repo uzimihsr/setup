@@ -12,8 +12,7 @@
 - [install script](#install-script)
 - [install atom-beautify](#install-atom-beautify)
 - [install linter](#install-linter)
-- install atom-ide-ui
-- install ide-python
+- [install atom-ide-ui](#install-atom-ide-ui)
 - [for python](#for-python)
 
 ## install Atom
@@ -32,12 +31,6 @@ GitHub連携とかはやらなくてもいい, Gitタブだけでもかなり便
 $ apm install file-icons
 ```
 
-または
-
-`Preferences -> Install -> Packages`で`file-icons`を検索. いっぱい出てくるけど画像のものをInstall.
-
-![file-icons](images/atom-file-icons.png)
-
 ## install script
 [script](https://atom.io/packages/script)
 
@@ -47,13 +40,9 @@ Atom上でファイルを実行してくれる.
 $ apm install script
 ```
 
-`Preferences -> Install -> Packages`で`script`を検索. たぶん一番上にくるやつをInstall.
-
-![script](images/atom-script.png)
-
 実行したいファイルを開いた状態で`⌘I`を押すと実行される.
 
-内部的にはファイルの拡張子から推測した実行コマンド(.pyなら`python`)を選んでいるっぽい. pythonの仮想環境を有効にするのはちょいめんどくさいかも
+内部的にはファイルの拡張子から推測した実行コマンド(.pyなら`python`)を選んでいるっぽい.
 
 ## install atom-beautify
 [atom-beautify](https://atom.io/packages/atom-beautify)
@@ -75,8 +64,9 @@ $ apm install atom-beautify
 $ apm install linter
 ```
 
+atom-ide-uiのdiagnosisと競合するのでdisableしといたほうがいいかも
+
 ## install atom-ide-ui
-注意
 [atom-ide-ui](https://atom.io/packages/atom-ide-ui)
 
 AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加で入れる必要あり.
@@ -84,8 +74,6 @@ AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加�
 ```
 $ apm install atom-ide-ui
 ```
-
-もしかしたらlinterとかbeautifierと衝突するかもなので慎重に使っていく.
 
 ## for python
 pythonを気持ちよく使うための設定.
@@ -100,12 +88,12 @@ scriptでpythonを実行するときのインタプリタを設定する.
 exports.Python =
   'Selection Based':
     #command: 'python' # この行を
-    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    command: '/Users/ryota/python-atom/.venv/bin/python' # 使いたいpythonのパスに変更
     args: (context) -> ['-u', '-c', context.getCode()]
 
   'File Based':
     #command: 'python' # 同様に
-    command: '/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/python' # 使いたいpythonのパスに変更
+    command: '/Users/ryota/python-atom/.venv/bin/python' # 使いたいpythonのパスに変更
     args: ({filepath}) -> ['-u', filepath]
 
 exports.MagicPython = exports.Python
@@ -138,7 +126,7 @@ flake8がインストールされているパスを記述.
 $ cd ~/python-atom
 $ pipenv shell
 $ which flake8
-/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/flake8 # ここで出力されるパスを記述
+/Users/ryota/python-atom/.venv/bin/flake8 # ここで出力されるパスを記述
 ```
 
 ![linter-flake8](images/atom-linter-flake8.png)
@@ -152,9 +140,9 @@ autopep8とisortのパスを通す.
 $ cd ~/python-atom
 $ pipenv shell
 $ which autopep8
-/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/autopep8
+/Users/ryota/python-atom/.venv/bin/autopep8
 $ which isort
-/Users/ryota/.local/share/virtualenvs/python-atom-hkS5K4kd/bin/isort
+/Users/ryota/python-atom/.venv/bin/isort
 ```
 
 ![atom-beautify-python](images/atom-beautify-python.png)
@@ -168,6 +156,9 @@ atom-ide-uiをpythonに対応させてくれる.
 $ apm install ide-python
 ```
 
-linterとかと競合するのでよく考えて使う.
+Atomを再起動後, `Preferences -> Packages -> ide-python -> settings -> Python Executable`に使いたいpythonのパスを通す.
+
+![atom-ide-python](images/atom-ide-python.png)
+
 ## future
 どんどん足していきたい
