@@ -6,7 +6,7 @@
 - [Mac](mac.md) : キーボード設定, brew, CheatSheet, iTerm2, Iceberg
 - [zsh](zsh.md) : zsh, prezto, zsh-syntax-highlighting, zsh-autosuggestions
 - [python](python.md) : pythonの環境構築
-- [Atom](atom.md) : ide-ui, file-icon
+- [Atom](atom.md) : file-icons, script, atom-beautify, atom-ide-ui
 - [Vim](vim.md) : .vimrc, iceberg
 - go : goの環境構築
 
