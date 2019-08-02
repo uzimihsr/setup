@@ -78,6 +78,8 @@ $ apm install atom-ide-ui
 ## for python
 pythonを気持ちよく使うための設定.
 
+`setup/python-atom/Pipfile`の内容がインストールされているpythonを想定.
+
 ### setup script
 scriptでpythonを実行するときのインタプリタを設定する.
 
