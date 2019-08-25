@@ -8,7 +8,7 @@
 - [python](python.md) : pythonの環境構築
 - [Atom](atom.md) : file-icons, script, atom-beautify, atom-ide-ui
 - [Vim](vim.md) : .vimrc, iceberg
-- go : goの環境構築
+- [go](go.md) : goの環境構築
 
 レポジトリごとにGitアカウントを使い分けるには
 ```
