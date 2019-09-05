@@ -1,4 +1,5 @@
 # Go環境構築メモ
+Goのセットアップ
 
 ## 必要なもの
 - Mac
@@ -10,7 +11,6 @@
 - [install go](#install-go)
 
 ## install goenv
-
 anyenvを使って[goenv](https://github.com/syndbg/goenv)をインストールし, そのgoenvを使ってGoをインストールする.  
 
 まずはgoenvをもってくる.
