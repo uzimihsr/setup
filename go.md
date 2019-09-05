@@ -9,6 +9,7 @@ Goのセットアップ
 ## やること
 - [install goenv](#install-goenv)
 - [install go](#install-go)
+- [install tools](#install-tools)
 
 ## install goenv
 anyenvを使って[goenv](https://github.com/syndbg/goenv)をインストールし, そのgoenvを使ってGoをインストールする.  
@@ -135,4 +136,29 @@ $ echo $GOPATH
 /Users/ryota/go/1.12.9
 ```
 
-以上. 必要に応じてGoのバージョンを変えていきたい.
+以上. 必要に応じてGoのバージョンを変えていきたい.  
+
+## install tools
+Goを便利に使うためのツールを導入する.  
+というよりは, 後ほど[Atom](atom.md)に[go-plus](https://atom.io/packages/go-plus)を入れるためのツールを入れておく.  
+
+```
+$ goenv global 1.13.0
+$ goenv rehash
+$ exec $SHELL -l
+$ go get -u golang.org/x/tools/cmd/goimports
+$ go get -u golang.org/x/tools/cmd/gorename
+$ go get -u github.com/sqs/goreturns
+$ go get -u github.com/mdempsky/gocode
+$ go get -u github.com/alecthomas/gometalinter
+$ go get -u github.com/mgechev/revive
+$ go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+$ go get -u github.com/zmb3/gogetdoc
+$ go get -u github.com/zmb3/goaddimport
+$ go get -u github.com/rogpeppe/godef
+$ go get -u golang.org/x/tools/cmd/guru
+$ go get -u github.com/fatih/gomodifytags
+$ go get -u github.com/tpng/gopkgs
+$ go get -u github.com/ramya-rao-a/go-outline
+$ go get -u github.com/go-delve/delve/cmd/dlv
+```
