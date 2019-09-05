@@ -63,7 +63,7 @@ $ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
 $ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
 ```
 
-まずは利用可能なGoのバージョンを確認する.  
+利用可能なGoのバージョンを確認する.  
 ```
 $ goenv install -l
 Available versions:
@@ -78,7 +78,6 @@ Available versions:
 ```
 
 とりあえずは安定版の`1.13.0`をインストールする.  
-
 ```
 $ goenv install 1.13.0
 Downloading go1.13.darwin-amd64.tar.gz...
@@ -88,7 +87,6 @@ Installed Go Darwin 64bit 1.13.0 to /Users/username/.anyenv/envs/goenv/versions/
 ```
 
 現在インストールされているGoのバージョン一覧を確認する.  
-
 ```
 $ goenv versions
   1.13.0
@@ -96,7 +94,6 @@ $ goenv versions
 
 すべてのディレクトリで有効なGoを`1.13.0`にする.  
 `goenv rehash`の後にシェルを再起動しないとPATHが通らないので注意.
-
 ```
 $ goenv global 1.13.0
 $ goenv rehash
@@ -105,7 +102,6 @@ $ exec $SHELL -l
 
 以上でGoが使用可能になるはずなので, 動作確認してみる.  
 goenvを使っている場合`GOPATH`はGoのバージョンごとに勝手に管理してくれる. 便利.  
-
 ```
 $ which go
 /Users/username/.anyenv/envs/goenv/shims/go
@@ -118,7 +114,6 @@ $ echo $GOPATH
 ```
 
 試しに違うバージョンのGoも入れてみる.
-
 ```
 $ goenv install 1.12.9
 Downloading go1.12.9.darwin-amd64.tar.gz...
