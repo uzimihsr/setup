@@ -90,6 +90,8 @@ $ apm install go-plus
 Installing go-plus to /Users/username/.atom/packages ✓
 ```
 
+Preferencesからgo-plusを開き, GOPATHを設定する.
+
 ### install go-debug
 [go-debug](https://atom.io/packages/go-debug)  
 Goのデバッガ.  
@@ -98,6 +100,8 @@ Goのデバッガ.
 $ apm install go-debug
 Installing go-debug to /Users/username/.atom/packages ✓
 ```
+
+Preferencesからgo-debugを開き, `which dlv`で得られるパスを設定する.
 
 ### install go-signature-statusbar
 [go-signature-statusbar](https://atom.io/packages/go-signature-statusbar)  
