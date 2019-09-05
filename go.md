@@ -16,20 +16,52 @@ anyenvを使って[goenv](https://github.com/syndbg/goenv)をインストール�
 まずはgoenvをもってくる.
 ```
 $ anyenv install goenv
+/var/folders/t7/qck11mhn5fj4q6r1mbdf2nxw0000gn/T/goenv.20190905230244.938 ~
+Cloning https://github.com/syndbg/goenv.git master to goenv...
+Cloning into 'goenv'...
+remote: Enumerating objects: 72, done.
+remote: Counting objects: 100% (72/72), done.
+remote: Compressing objects: 100% (48/48), done.
+remote: Total 13907 (delta 32), reused 43 (delta 18), pack-reused 13835
+Receiving objects: 100% (13907/13907), 2.51 MiB | 2.55 MiB/s, done.
+Resolving deltas: 100% (9510/9510), done.
+~
+
+Install goenv succeeded!
+Please reload your profile (exec $SHELL -l) or open a new session.
+
 $ exec $SHELL -l
-```
+$ goenv
+goenv 2.0.0beta11
+Usage: goenv <command> [<args>]
 
-自分は[zsh](zsh.md)を使っているので, goを使うために必要な環境変数を`~/.zshrc`に書き込んでいく.  
+Some useful goenv commands are:
+   commands    List all available commands of goenv
+   local       Set or show the local application-specific Go version
+   global      Set or show the global Go version
+   shell       Set or show the shell-specific Go version
+   install     Install a Go version using go-build
+   uninstall   Uninstall a specific Go version
+   rehash      Rehash goenv shims (run this after installing executables)
+   version     Show the current Go version and its origin
+   versions    List all Go versions available to goenv
+   which       Display the full path to an executable
+   whence      List all Go versions that contain the given executable
 
+See 'goenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/syndbg/goenv#readme
 ```
-$ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
-$ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
-```
-
 以上でgoenvが動かせるようになる.  
 
 ## install go
 goenvを使って使いたいバージョンのGoを入れていく.  
+
+その前にgoを使うために必要な環境変数を`~/.zshrc`に書き込む.  
+
+```
+$ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
+$ echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.zshrc
+```
 
 まずは利用可能なGoのバージョンを確認する.  
 ```
@@ -49,6 +81,10 @@ Available versions:
 
 ```
 $ goenv install 1.13.0
+Downloading go1.13.darwin-amd64.tar.gz...
+-> https://dl.google.com/go/go1.13.darwin-amd64.tar.gz
+Installing Go Darwin 64bit 1.13.0...
+Installed Go Darwin 64bit 1.13.0 to /Users/username/.anyenv/envs/goenv/versions/1.13.0
 ```
 
 現在インストールされているGoのバージョン一覧を確認する.  
@@ -85,6 +121,11 @@ $ echo $GOPATH
 
 ```
 $ goenv install 1.12.9
+Downloading go1.12.9.darwin-amd64.tar.gz...
+-> https://dl.google.com/go/go1.12.9.darwin-amd64.tar.gz
+Installing Go Darwin 64bit 1.12.9...
+Installed Go Darwin 64bit 1.12.9 to /Users/ryota/.anyenv/envs/goenv/versions/1.12.9
+
 $ goenv global 1.12.9
 $ goenv rehash
 $ exec $SHELL -l
