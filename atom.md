@@ -1,4 +1,5 @@
 # Atom設定メモ
+Atomをいい感じに設定していく.
 
 ## 必要なもの
 - Mac
@@ -13,6 +14,7 @@
 - [install atom-beautify](#install-atom-beautify)
 - [install linter](#install-linter)
 - [install atom-ide-ui](#install-atom-ide-ui)
+- [for Go](#for-Go)
 - [for python](#for-python)
 
 ## install Atom
@@ -75,8 +77,42 @@ AtomをIDEっぽく使えるようにしてくれる. 各言語のideを追加�
 $ apm install atom-ide-ui
 ```
 
+## for Go
+Goを気持ちよく使うための設定.  
+[Goのtools](go.md#install-tools)が入っていることが前提だが, なければgo-plusの起動時に入れてくれるはず.  
+
+### install go-plus
+[go-plus](https://atom.io/packages/go-plus)  
+AtomでGoを書くときにいろいろ助けてくれる.  
+
+```
+$ apm install go-plus
+Installing go-plus to /Users/username/.atom/packages ✓
+```
+
+Preferencesからgo-plusを開き, GOPATHを設定する.
+
+### install go-debug
+[go-debug](https://atom.io/packages/go-debug)  
+Goのデバッガ.  
+
+```
+$ apm install go-debug
+Installing go-debug to /Users/username/.atom/packages ✓
+```
+
+Preferencesからgo-debugを開き, `which dlv`で得られるパスを設定する.
+
+### install go-signature-statusbar
+[go-signature-statusbar](https://atom.io/packages/go-signature-statusbar)  
+ステータスバーにいい感じの情報を載せてくれる.  
+```
+$ apm install go-signature-statusbar
+Installing go-signature-statusbar to /Users/username/.atom/packages ✓
+```
+
 ## for python
-pythonを気持ちよく使うための設定.
+pythonを気持ちよく使うための設定.  
 
 `setup/python-atom/Pipfile`の内容がインストールされているpythonを想定.
 
