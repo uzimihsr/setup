@@ -189,5 +189,8 @@ source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 kubeoff
 ```
+`$ kubeon`, `$ kubeoff`で表示/非表示の切り替えができる.
+
+
 ## future
 なんかいいのあったら足していこう
