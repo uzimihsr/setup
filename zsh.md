@@ -175,7 +175,19 @@ echo 'source <(kubectl completion zsh)' >> ~/.zshrc
 
 プロンプトにkubeの情報を表示させる
 ```
+# Macの場合
 $ brew install kube-ps1
+
+# それ以外の場合
+$ git clone https://github.com/jonmosco/kube-ps1.git
+$ cp kube-ps1/kube-ps1.sh /usr/local/opt/kube-ps1/share/kube-ps1.sh
+```
+
+`~/.zshrc`に以下の記述を追加
+```
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+kubeoff
 ```
 ## future
 なんかいいのあったら足していこう
