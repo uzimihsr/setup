@@ -167,5 +167,15 @@ zstyle ':prezto:load' pmodule \
 
 terminalを再起動.
 
+## setup for Kubernetes
+kubectlの補完
+```
+echo 'source <(kubectl completion zsh)' >> ~/.zshrc
+```
+
+プロンプトにkubeの情報を表示させる
+```
+$ brew install kube-ps1
+```
 ## future
 なんかいいのあったら足していこう
