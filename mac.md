@@ -84,5 +84,13 @@ $ git clone https://github.com/Arc0re/Iceberg-iTerm2
 
 `iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets... -> Import...`から, `[cloneしてきたIceberg-iTerm2]/iceberg.itermcolors`を選択.
 
-## future
-なんかいいのあったら足していこう
+## install tree
+
+ディレクトリを階層構造で表示してくれるコマンド.  
+
+```
+$ brew install tree
+```
+
+## others
+なんかいいのあったら足していく
