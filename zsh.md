@@ -15,25 +15,26 @@
 ## やること
 - [install zsh](#install-zsh)
 - [install prezto](#install-prezto)
-- [install zsh-syntax-highlighting](#install-zsh-syntax-highlighting)
-- [install zsh-autosuggestions](#install-zsh-autosuggestions)
+- [enable zsh-syntax-highlighting](#enable-zsh-syntax-highlighting)
+- [enable zsh-autosuggestions](#enable-zsh-autosuggestions)
+- [enable zsh-completions](#enable-zsh-completions)
 
 ## install zsh
 
-Macの場合:
-
-```
+**Macの場合**  
+brewで入れる.  
+```bash
 $ brew update
 $ brew install zsh
 ```
 
 `/usr/local/bin/zsh`にインストールされるはず.  
 
-使えるシェルの一覧を確認.
-
-```
+**ログインシェルの変更**  
+ログインしたときに立ち上がるシェルをzshに変更する.  
+```bash
+# 使えるシェルの一覧を確認
 $ cat /etc/shells
-
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
 # one of these shells.
@@ -43,43 +44,36 @@ $ cat /etc/shells
 /bin/sh
 /bin/tcsh
 /bin/zsh
-/usr/local/bin/zsh # この行が追加されてない場合は追記する
-```
+/usr/local/bin/zsh # こいつを使いたい
 
-ログインシェルを変更する
-
-```
+# ログインシェルを変更
 $ chsh -s /usr/local/bin/zsh
 ```
 
-terminalを再起動.
-
 ## install prezto
 
-preztoをgit clone
+**preztoのインストール**  
 
-```
+[prezto](https://github.com/sorin-ionescu/prezto)をgit cloneして,  
+home直下にzsh設定ファイル(`.zshrc`, `.zlogin`, `.zlogout`, `.zprofile`, `.zshenv`)へのシンボリックリンクを張る.  
+
+```bash
+# git clone
 $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-```
 
-または[公式](https://github.com/sorin-ionescu/prezto)のコマンドを打つ.
-
-zsh設定ファイルへのシンボリックリンクを貼る. 以下をコピペする.
-
-```
+# シンボリックリンクを張る
 $ setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 ```
 
-home直下に.zshrc, .zlogin, .zlogout, .zprofile, .zshenvへのシンボリックリンクができているはず.
+**プロンプトの変更**  
 
-`.zpreztorc`を編集, プロンプトを変更. pure一択.
+`.zpreztorc`を編集してプロンプトを変更する. pureが好き.  
 
-```
+```bash
 $ vim ~/.zpreztorc
-
 ...
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
@@ -89,14 +83,12 @@ zstyle ':prezto:module:prompt' theme 'pure'  # に変更
 ...
 ```
 
-terminalを再起動.
+## enable zsh-syntax-highlighting
 
-## install zsh-syntax-highlighting
+`.zpreztorc`に記述する.  
 
-`.zpreztorc`に記述
-```
+```bash
 $ vim ~/.zpreztorc
-
 ...
 #
 # General
@@ -113,7 +105,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'syntax-highlighting'\ # この行を追加
+  'syntax-highlighting' \ # この行を追加
   'prompt'
 ...
 #
@@ -137,12 +129,12 @@ zstyle ':prezto:module:syntax-highlighting' color 'yes'
 ...
 ```
 
-## install zsh-autosuggestions
+## enable zsh-autosuggestions
 
-`.zpreztorc`に記述
-```
+`.zpreztorc`に記述する.  
+
+```bash
 $ vim ~/.zpreztorc
-
 ...
 #
 # General
@@ -165,16 +157,42 @@ zstyle ':prezto:load' pmodule \
 ...
 ```
 
-terminalを再起動.
+## enable zsh-completions
+
+デフォルトで有効になっているはず.  
+
+```bash
+$ vim ~/.zpreztorc
+...
+#
+# General
+#
+...
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \ # この行があればOK
+  'syntax-highlighting'\
+  'autosuggestions'\
+  'prompt'
+...
+```
 
 ## setup for Kubernetes
-kubectlの補完
-```
+kubectlの補完  
+```bash
 echo 'source <(kubectl completion zsh)' >> ~/.zshrc
 ```
 
-プロンプトにkubeの情報を表示させる
-```
+プロンプトにkubeの情報を表示させる  
+```bash
 # Macの場合
 $ brew install kube-ps1
 
@@ -183,14 +201,14 @@ $ git clone https://github.com/jonmosco/kube-ps1.git
 $ cp kube-ps1/kube-ps1.sh /usr/local/opt/kube-ps1/share/kube-ps1.sh
 ```
 
-`~/.zshrc`に以下の記述を追加
-```
+`~/.zshrc`に以下の記述を追加  
+```bash
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 kubeoff
 ```
-`$ kubeon`, `$ kubeoff`で表示/非表示の切り替えができる.
+`$ kubeon`, `$ kubeoff`で表示/非表示の切り替えができる.  
 
 
 ## future
-なんかいいのあったら足していこう
+なんかいいのあったら足していこう  
