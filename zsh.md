@@ -157,6 +157,9 @@ zstyle ':prezto:load' pmodule \
 ...
 ```
 
+補完関数は`~/.zprezto/modules/completion/external/src`に配置されている.  
+自作したやつとかを追加したかったらここに書いていいと思う.  
+
 ## enable zsh-completions
 
 デフォルトで有効になっているはず.  
